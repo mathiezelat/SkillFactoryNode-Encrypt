@@ -7,8 +7,7 @@ const encrypt = (text, key) => {
 
 		if (i % 2 === 1) {
 			newChar = char + key + i + text.length
-		}
-		if (i % 2 === 0) {
+		} else {
 			newChar = newChar + text.length + i + key
 		}
 
@@ -32,8 +31,7 @@ const desencrypt = (encrypted, key) => {
 
 		if (i % 2 === 1) {
 			newChar = char - key - i - encrypted.length
-		}
-		if (i % 2 === 0) {
+		} else {
 			newChar = newChar - encrypted.length - i - key
 		}
 
